@@ -1,0 +1,94 @@
+---
+title: "6/11 meeting"
+format: revealjs
+---
+
+---
+
+### What is Rain on Snow (ROS)
+
+* A day when precipitation occurred and snow depth decreased (McCabe et al. 2007)
+
+* Definitions that utilize quantitative measures
+  * Rainfall $\ge$ 1mm, Snow Water Equivalent (SWE) simultaneously reduces by any amount (Guan et al. 2016)
+  * Rainfall $\ge$ 1mm, SWE $\ge$ 1mm (Li et al. 2025)
+  * Rainfall $\ge$ $\frac{10mm}{day}$ , SWE $\ge$ 10mm (Musselman et el. 2018; Li et al. 2025)
+    * $\ge$ 20% of the sum of rainfall and snowmelt is snowmelt (Musselman et el. 2018)
+---
+
+### Reasoning Behind Higher Threshold definition
+
+In the Methods of Musselman et al. (2018) says that $\frac{10mm}{day}$ rainfall is conservative estimate based off of other thresholds found in other papers. Leading to a high degree of confidence in the results. The $\ge$ 20% guarantees that cold content is eliminated and there is substantial draining of the snow pack.
+
+Li et al. (2025) notes that there are no universally accepted thresholds for rain or SWE
+---
+
+### Regarding the Snow Pack
+
+* Brandt et al. (2022) defined active and passive snowpacks
+  * active: produces a lot of snowmelt during an ROS, >> 10% Terrestrial Water Input (TWI)
+  * passive: produces < 10% TWI
+
+Many things affect the snowpack's cold content: Snow Albedo, decrease in snow fall, downwelling longwave radiation, surface soil temperatures, and advected heat due to rain (Brandt et al. 2022)
+
+---
+### Atmospheric Rivers (AR)
+
+AR storms are typically warmer with higher altitude of melting levels. Thus resulting in rain falling over much higher elevations. Leading to runoff over a much larger catchment area. (Guan et al. 2016). The warmer air and condensation of vapor directly onto the snow can melt snow (Guan et al. 2016)
+
+ROS event happen 15% during ARs compared to only 6% on regular precipitation days (Guan et al. 2016)
+
+Streamflow/precipitation ratio is 50% during ARs with ROS than ARs without ROS (Guan et al. 2016)
+---
+
+### Elevation Trends
+
+Higher Elevation: ROS frequency increased due to precipitation shifting from snow to rain (McCabe et al. 2007; Musselman et el. 2018; Li et al. 2025)
+
+Lower Elevation: ROS frequency decreased due to a decrease in the number of days with snow on the ground (McCabe et al. 2007; Musselman et el. 2018; Li et al. 2025)
+
+---
+
+### Possible Ideas?
+
+* How does vegetation affect ROS?
+
+* Are there more drivers, other than elevation, that decide if a region will have more rainfall or less antecedent snowpack that could effect the frequency of ROS
+
+* Regional variability is mentioned in many papers. Should there be differing definitions for ROS events when concerned about flooding?
+
+* How related are ROS events and droughts
+
+* Something involving statistical modeling/Extreme value theory
+
+---
+
+### What to read next
+
+* Have been given several papers by Dr. Huning and Dr. Rhoades.
+
+* Groisman et al (2006b), Ye et al. (2008) papers cited in Cohen et al. (2015)
+
+* Wayand et al. (2015) cited in Brandt et al. (2022) about passive snowpacks may be equally potent flood drivers
+
+* Extreme Value Theory in context of climate extremes (papers still need to be found)
+
+---
+
+### Other things done
+
+* Getting antiquated with NERSC
+  * UNIX...
+  
+* Downloaded ERA5 - Land
+  * want to try analysis on Merced Flood January 1997
+  
+---
+
+### Plans
+
+* Do some data analysis in NERSC with ERA5 - Land
+
+* Focus in on a research project.
+
+
