@@ -1,0 +1,114 @@
+---
+title: "6/18"
+format: revealjs
+---
+
+### Refresher I
+- Rain on Snow (ROS) has different definitions found in literature.
+  - Loosely: Rainfall $\ge$ 1mm, Snow Water Equivalent (SWE) simultaneously reduces by any amount (Guan et al. 2016)
+  - Stricter: Rainfall $\ge$ 1mm, SWE $\ge$ 1mm (Li et al. 2025) and Rainfall $\ge$ $\frac{10mm}{day}$ , SWE $\ge$ 10mm (Musselman et el. 2018; Li et al. 2025)
+- ROS happen when freezing level is at a high enough altitude where precipitation falls as rain
+  - Atmospheric Rivers (AR) are warm weather systems that increase the likelihood of a ROS event (Guan et al. 2016)
+
+---
+
+### Refresher II
+
+- ROS can create a lot of runoff increasing chances of flood.
+- ROS and a heating climate interact in ways that are dependent on region
+- Trends in altitude have been discovered
+  - Higher Elevation: ROS frequency increased due to precipitation shifting from snow to rain (McCabe et al. 2007; Musselman et el. 2018; Li et al. 2025)
+  - Lower Elevation: ROS frequency decreased due to a decrease in the number of days with snow on the ground (McCabe et al. 2007; Musselman et el. 2018; Li et al. 2025)
+
+---
+
+### Readings  - Cohen et al. 2015
+
+  - Focus on Northern Hemisphere and seasons
+  - Teleconnection Patterns (Arctic Oscillation (AO))
+    - Positive AO results in higher frequency of ROS events to the north: "Poleward of $60^o$N across Eurasia and Northeastern Canada"
+      - Correlated with increase Rainfall
+    - Negative AO results in higher frequency of ROS events to the south: "Equatorward of $60^o$N across Eurasia and Western Canada)
+      - Correlated with increase in snow cover
+ 
+---
+
+### Readings - Cohen et al. 2015 cont
+
+- What are Teleconnection and AO? ([Lindsey 2011](https://www.climate.gov/news-features/understanding-climate/long-distance-relationships-arctic-and-north-atlantic#:~:text=Long%2Ddistance%20relationships%20between%20weather,latitudes%20is%20the%20Arctic%20Oscillation.))
+  - Long-distance relationships between weather patterns in different regions are known as Teleconnections.
+  - The period shifting of the mass of the atmosphere from the Arctic regions to the mid-latitudes is the Arctic Oscillation.
+- Trends with a warming climate
+  - Fall: Decreasing trends in western Eurasia and increasing trends in North America
+  - Winter: "Trends are regionally depended with little coherency in trends on continental scales"
+---
+
+### Readings - Maina and Kumar 2025
+
+- A global analysis of ROS under historical conditions and future projections
+- SSP245 and SSP585 projected until 2100
+  - SSP245 is a intermediate warming scenerio and SSP585 is a severe warming scenerio
+  - [The SSP Scenerios](https://www.dkrz.de/en/communication/climate-simulations/cmip6-en/the-ssp-scenarios)
+- ROS expected to shift towards higher latitudes and altitude zones
+- Rainfall will dominate water available for runoff
+
+---
+
+### Readings - Tarouilly et al. 2021
+
+- Identified most severe and spatially extensive historical floods in the Western U.S.
+- Identified three general categories of the 100 largest floods
+  - 60% are winter floods that occur mostly on the coast, coincide with AR storms and are characterized by extreme rainfall and ROS on part of the region
+  - 30% are late spring floods associated with anomalous winter snow accumulation and often have components of both radiation melt and ROS
+  - 10% are late summer storms almost exclusively caused by rainfall.
+
+---
+
+### Readings - Snowpack Energy Exchange: Basic Theory
+
+$$
+Q_i = Q_{ns}+Q_{nl}+Q_{h}+Q_e+Q_{r}+Q_{g}+Q_{m}
+$$
+
+- net Short wave, $Q_{ns}$, and net Long wave $Q_{nl}$ radiation
+- exchange of sensible heat, $Q_{h}$, and latent, $Q_{e}$, heat with the atmosphere
+- liquid water draining from the snowpack, $Q_{m}$
+- Smaller amounts of energy can be added from:
+  - sensible and latent heat from rainfall, $Q_{r}$
+  - ground heat conduction, $Q_{g}$
+
+---
+
+### Extreme Value Theory I
+
+- Two Textbooks
+  - Extreme Value Theory An Introduction by Laurens de Haan and Ana Ferreira
+  - An Introduction to Statistical Modeling of Extreme Values by Stuart Coles
+- Various Articles on Multivariate GEVD have been found
+- Important Concepts to Learn
+  - Max-stable Processes
+  - Copulas
+  
+---
+
+### Extreme Value Theory II
+
+Idea: Spatial Extreme Value Modeling
+  - multivariate distribution: At the very least SWE and rainfall.
+
+### NERSC
+
+- Getting the command line down
+- been messing around with ERA5-Land and cdo
+- Next step is making some plots and maps
+  - ETA next week.
+
+---
+
+### Plans
+
+- Continue to read ROS material
+- Read statistical paper Dr. Huning emailed me
+- Read Extreme Value Theory material for Spatial Extremes
+- Make descriptive plots with NERSC
+  - plots that show areal extent of different ROS definitions

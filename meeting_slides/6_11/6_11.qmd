@@ -77,11 +77,12 @@ Lower Elevation: ROS frequency decreased due to a decrease in the number of days
 
 ### Other things done
 
-* Getting antiquated with NERSC
+* Getting acquainted with NERSC
   * UNIX...
   
-* Downloaded ERA5 - Land
+* Downloaded ERA5 - Land dataset
   * want to try analysis on Merced Flood January 1997
+  * .nc
   
 ---
 
@@ -91,4 +92,5 @@ Lower Elevation: ROS frequency decreased due to a decrease in the number of days
 
 * Focus in on a research project.
 
+* Do some reading
 
