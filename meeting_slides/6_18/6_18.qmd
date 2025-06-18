@@ -96,6 +96,10 @@ $$
 Idea: Spatial Extreme Value Modeling
   - multivariate distribution: At the very least SWE and rainfall.
 
+Note: EVT slides will get better soon...
+  
+---
+
 ### NERSC
 
 - Getting the command line down
