@@ -1,0 +1,51 @@
+---
+title: "Untitled"
+format: pdf
+---
+
+```{r}
+library(readxl)
+library(tidyverse)
+library(lubridate)
+library(knitr)
+library(kableExtra)
+```
+
+#
+
+```{r}
+algo_table <- read_excel("tables_plots/table_algos.xlsx")
+kable(algo_table,
+      format = "html",
+      caption = "Rain-on-Snow Detection Algorithms") %>%
+  kable_styling(font_size = 15, bootstrap_options = c("striped", "condensed"), full_width = TRUE)
+```
+
+```{r}
+library(kableExtra)
+library(webshot2)
+
+# Create HTML file
+kable(algo_table,
+      format = "html",
+      caption = "Rain-on-Snow Detection Algorithms") %>%
+  kable_styling(font_size = 15, bootstrap_options = c("striped", "condensed"), full_width = TRUE) %>%
+  save_kable("algo_table.png")
+```
+
+```{r}
+library(kableExtra)
+library(webshot2)
+library(magick)  # optional, improves PNG quality
+
+kable(the_floods, caption = "Rain-on-Snow Flood Events") %>%
+  kable_styling(
+    font_size = 23,
+    bootstrap_options = c("condensed", "striped"),
+    full_width = FALSE
+  ) %>%
+  row_spec(0, bold = TRUE) %>%
+  column_spec(1:ncol(the_floods), width = "5em") %>%
+  save_kable("ros_floods_table.png")  # explicit PNG output
+```
+

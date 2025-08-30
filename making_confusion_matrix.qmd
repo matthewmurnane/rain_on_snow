@@ -1,0 +1,109 @@
+---
+title: "Confusion Matrix"
+format:
+  pdf:
+    pdf-engine: xelatex
+    keep-tex: true
+    toc: false
+    number-sections: false
+    fig-width: 5
+    fig-height: 4
+    df-print: default
+fontsize: 10pt
+mainfont: "Latin Modern Roman"
+---
+
+
+
+
+```{r}
+library(gt)
+library(dplyr)
+library(gtExtras)
+library(katex)
+library(tidyverse)
+
+conf_matrix <- tibble::tibble(
+  `UCLA SWE Change` = c("Negative change", "Non-negative change"),
+  `ROS Event` = c("True Positive (TP)", 
+               "False Positive (FP)"),
+  `No ROS Event` = c("False Negative (FN)", 
+               "True Negative (TN)"),
+  Metric = c("$\\frac{\\text{TP}}{\\text{TP}+\\text{FN} }$<br>**True Positive Rate (TPR)**", 
+             "$\\frac{\\text{FP}}{\\text{FP}+\\text{TN} }$<br>**False Positive Rate (FPR)**")
+  )
+
+ros_conf_matrix <- conf_matrix %>%
+  gt(rowname_col = "UCLA SWE Change") %>%
+  tab_header(
+    title = md("**Example of a Confusion Matrix for UCLA SWE Change and a ROS Detection Algorithm**"),
+    subtitle = "How well does a given ROS algorithm predict a negative change in UCLA SWE?"
+  ) %>%
+  tab_spanner(
+    label = "ROS Detection Algorithm",
+    columns = c("ROS Event", "No ROS Event")
+  ) %>%
+  tab_stubhead(label = "UCLA SWE change") %>%
+  fmt_markdown(columns = everything()) %>%
+  cols_align(align = "center", columns = everything()) %>%
+  cols_width(
+    `ROS Event` ~ px(120),
+    `No ROS Event` ~ px(120),
+    Metric ~ px(130),
+    everything() ~ px(100)
+  ) %>%
+  opt_row_striping() %>%
+  tab_footnote(
+    footnote = "TPR: Proportion of negative SWE change that was detected as a ROS event",
+    locations = cells_body(columns = Metric, rows = 1)
+  ) %>%
+  tab_footnote(
+    footnote = "FPR: Proportion of non-negative SWE change that was detected as a ROS event",
+    locations = cells_body(columns = Metric, rows = 2)
+  ) %>%
+  # Add vertical line (right border) to Negative column
+  tab_style(
+    style = cell_borders(
+      sides = "right",
+      color = "black",
+      weight = px(2)
+    ),
+    locations = cells_body(columns = `No ROS Event`)
+  ) %>%
+  # Color TP and TN cells green
+  tab_style(
+    style = cell_text(color = "black", weight = "bold"),
+    locations = cells_body(
+      columns = `ROS Event`, rows = 1
+    )
+  ) %>%
+  tab_style(
+    style = cell_text(color = "black", weight = "bold"),
+    locations = cells_body(
+      columns = `No ROS Event`, rows = 2
+    )
+  ) %>%
+  # Color FP and FN cells red
+  tab_style(
+    style = cell_text(color = "red", weight = "bold"),
+    locations = cells_body(
+      columns = `ROS Event`, rows = 2
+    )
+  ) %>%
+  tab_style(
+    style = cell_text(color = "red", weight = "bold"),
+    locations = cells_body(
+      columns = `No ROS Event`, rows = 1
+    )
+  ) %>%
+  tab_options(
+    table.width = pct(90),
+    table.align = "center"
+  )
+```
+
+```{r}
+ros_conf_matrix %>%  gtsave(filename = "ros_conf_matrix_ex.png")
+```
+
+

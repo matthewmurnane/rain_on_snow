@@ -1,0 +1,35 @@
+---
+title: "Untitled"
+format: pdf
+---
+
+```{r include=FALSE, echo=FALSE}
+library(readxl)
+library(tidyverse)
+library(lubridate)
+```
+
+```{r}
+ros_floods <- read_xlsx("tables_plots/ros_floods_tarouilly.xlsx")
+```
+
+```{r}
+the_floods <- ros_floods %>%
+  filter(Date >= as.Date("1984-10-01"),
+         Date <= as.Date("2021-09-30")) %>%
+  mutate(date_minus_7 = Date - days(7),
+         date_plus_7 = Date + days(7)) %>%
+  arrange(rank)
+```
+
+```{r}
+# Convert longitudes to 0–360 system
+lon_min_360 <- -124.71 + 360  # = 235.29
+lon_max_360 <- -108.77 + 360  # = 251.23
+
+# Latitude remains the same
+lat_min <- 31.39
+lat_max <- 48.96
+
+```
+
